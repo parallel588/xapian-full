@@ -6,7 +6,7 @@ def system!(cmd)
 	system(cmd) or raise
 end
 
-ver = '1.2.3'
+ver = '1.2.7'
 core = "xapian-core-#{ver}"
 bindings = "xapian-bindings-#{ver}"
 xapian_config = "#{Dir.pwd}/#{core}/xapian-config"
@@ -27,7 +27,7 @@ task :default do
 		system! "cp -r .libs/* ../lib/"
 	end
 
-	
+
 
 	Dir.chdir bindings do
 		ENV['RUBY'] ||= "#{c['bindir']}/#{c['RUBY_INSTALL_NAME']}"
